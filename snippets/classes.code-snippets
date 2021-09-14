@@ -1,0 +1,57 @@
+{
+    "Have Background":{
+        "prefix": ["!bg", "!background"],
+        "body": "public \\$have_background_color = false;\n",
+        "description": "Removes background"
+    },
+    "Have Padding":{
+        "prefix": ["!p", "!padding"],
+        "body": "public \\$have_paddings = false;\n",
+        "description": "Removes padding"
+    },
+    "Have Container":{
+        "prefix": ["!c", "!container"],
+        "body": "public \\$have_container = true;\n",
+        "description": "Sets container"
+    },
+    "Default":{
+        "prefix": ["!d", "!default"],
+        "body": [
+            "public \\$default_values = [",
+            "\t'background_color' => '#f1f1f1',",
+            "\t'background_image' => '',",
+            "\t'background_classes' => '',",
+            "\t'padding_top' => '10px',",
+            "\t'padding_bottom' => '10px',",
+            "\t'padding_tailwind' => 'py-24',",
+            "\t'with_container' => false,",
+            "];\n"
+        ],
+        "description": "Edits default inserted styles"
+    },
+    "Use on Template":{
+        "prefix": ["!t", "!template"],
+        "body": "public \\$use_on_template = '${1:single-documentation books}';\n",
+        "description": ""
+    },
+    "Columns":{
+        "prefix": ["!col", "!columns"],
+        "body": "public \\$columns = ${1:4};\n",
+        "description": "Adds columns"
+    },
+    "Cruds":{
+        "prefix": ["!cr", "!crud"],
+        "body": "public \\$cruds = ['${1:menus}'];\n",
+        "description": "Sets cruds"
+    },
+    // "":{
+    //     "prefix": ["!", "!"],
+    //     "body": "",
+    //     "description": ""
+    // },
+    // "":{
+    //     "prefix": ["!", "!"],
+    //     "body": "",
+    //     "description": ""
+    // },
+}
