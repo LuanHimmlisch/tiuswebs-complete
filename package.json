@@ -2,7 +2,8 @@
     "name": "tiuswebs-complete",
     "displayName": "Tiuswebs Complete",
     "description": "An extension for developing Tiuswebs modules",
-    "version": "0.1.0",
+    "publisher": "LuanHimmlisch",
+    "version": "1.0.0",
     "engines": {
         "vscode": "^1.60.0"
     },
