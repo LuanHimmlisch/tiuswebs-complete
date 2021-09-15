@@ -2,13 +2,13 @@
 
 Tiuswebs Complete is a VS Code snippets extension to help you work through all the development of Tiuswebs components.
 
-\!\[feature 1\]\(./logo.png\)
+\!\[logo\]\(./assets/logo.png\)
 
 ## Features
 
 Natural snippets, just type as you would, and the snippets will pop up.
 
-\!\[feature 1\]\(./feature.gif\)
+\!\[feature\]\(./assets/feature.gif\)
 
 The same workflow, faster development.
 

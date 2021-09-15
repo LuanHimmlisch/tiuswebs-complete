@@ -4,12 +4,25 @@
     "description": "An extension for developing Tiuswebs modules",
     "publisher": "LuanHimmlisch",
     "version": "1.0.0",
+    "repository": {
+        "url": "https://github.com/LuanHimmlisch/tiusweb-complete"
+    },
+    "icon": "assets/icon.png",
+    "categories": [
+        "Snippets",
+        "Programming Languages",
+        "Formatters"
+    ],
+    "keywords": [
+        "snippets",
+        "php",
+        "emmet",
+        "psr",
+        "productivity"
+    ],
     "engines": {
         "vscode": "^1.60.0"
     },
-    "categories": [
-        "Snippets"
-    ],
     "contributes": {
         "languages": [
             {
