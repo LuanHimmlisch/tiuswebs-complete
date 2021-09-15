@@ -2,7 +2,7 @@
     "name": "tiuswebs-complete",
     "displayName": "Tiuswebs Complete",
     "description": "An extension for developing Tiuswebs modules",
-    "version": "0.0.1",
+    "version": "0.1.0",
     "engines": {
         "vscode": "^1.60.0"
     },
@@ -10,6 +10,31 @@
         "Snippets"
     ],
     "contributes": {
+        "languages": [
+            {
+                "id": "blade",
+                "aliases": [
+                    "Blade",
+                    "blade"
+                ],
+                "extensions": [
+                    ".blade.php"
+                ],
+                "configuration": "./blade.configuration.json"
+            }
+        ],
+        "grammars": [
+            {
+                "language": "blade",
+                "scopeName": "text.html.php.blade",
+                "path": "./syntaxes/blade.tmLanguage.json",
+                "embeddedLanguages": {
+                    "source.php": "php",
+                    "source.css": "css",
+                    "source.js": "javascript"
+                }
+            }
+        ],
         "snippets": [
             {
                 "language": "php",
@@ -19,6 +44,16 @@
                 "language": "blade",
                 "path": "./snippets/views.code-snippets"
             }
-        ]
+        ],
+        "configuration": {
+            "title": "Blade Configuration",
+            "properties": {
+                "blade.format.enable": {
+                    "type": "boolean",
+                    "default": false,
+                    "description": "Enable format blade file"
+                }
+            }
+        }
     }
 }

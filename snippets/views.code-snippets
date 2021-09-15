@@ -1,3 +1,86 @@
 {
-    
+    "Result Elements": {
+        "prefix": "",
+        "body": [
+            "@foreach($component->elements as $item)",
+            "\t$1",
+            "@endforeach\n$0"
+        ],
+        "description": ""
+    },
+    "Value Text":{
+        "prefix": ["text"],
+        "body": "{{ \\$values->$1_text }}$0",
+        "description": ""
+    },
+    "Value Text Color":{
+        "prefix": ["text_color"],
+        "body": "{{ \\$values->$1_text_color }}$0",
+        "description": ""
+    },
+    "Value Text Color Hover":{
+        "prefix": ["text_color_hover"],
+        "body": "{{ \\$values->$1_text_color_hover }}$0",
+        "description": ""
+    },
+    "Value Link":{
+        "prefix": ["link"],
+        "body": "{{ \\$values->$1_link }}$0",
+        "description": ""
+    },
+    "Value Background Color":{
+        "prefix": ["background_color"],
+        "body": "{{ \\$values->$1_background_color }}$0",
+        "description": ""
+    },
+    "Value Background Color Hover":{
+        "prefix": ["background_color_hover"],
+        "body": "{{ \\$values->$1_background_color_hover }}$0",
+        "description": ""
+    },
+    "Value Background Image":{
+        "prefix": ["background_image"],
+        "body": "{{ \\$values->$1_background_image }}$0",
+        "description": ""
+    },
+    "Value Color":{
+        "prefix": ["color"],
+        "body": "{{ \\$values->$1_color }}$0",
+        "description": ""
+    },
+    "Value Color Hover":{
+        "prefix": ["color_hover"],
+        "body": "{{ \\$values->$1_color_hover }}$0",
+        "description": ""
+    },
+    "Value Size":{
+        "prefix": ["size"],
+        "body": "{{ \\$values->$1_size }}$0",
+        "description": ""
+    },
+    "Value Icon":{
+        "prefix": ["icon"],
+        "body": "{{ \\$values->$1_icon }}$0",
+        "description": ""
+    },
+    "Value Height":{
+        "prefix": ["height"],
+        "body": "{{ \\$values->$1_height }}$0",
+        "description": ""
+    },
+    "Value Font":{
+        "prefix": ["font"],
+        "body": "{{ \\$values->$1_font }}$0",
+        "description": ""
+    },
+    "Value Weight":{
+        "prefix": ["weight"],
+        "body": "{{ \\$values->$1_weight }}$0",
+        "description": ""
+    },
+    "Value Classes":{
+        "prefix": ["classes"],
+        "body": "{{ \\$values->$1_classes }}$0",
+        "description": ""
+    },
 }

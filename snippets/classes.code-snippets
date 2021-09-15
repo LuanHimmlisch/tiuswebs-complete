@@ -1,21 +1,21 @@
 {
     "Have Background":{
-        "prefix": ["!bg", "!background"],
-        "body": "public \\$have_background_color = false;\n",
+        "prefix": ["bg", "$have_background"],
+        "body": "public \\$have_background_color = false;\n$0",
         "description": "Removes background"
     },
     "Have Padding":{
-        "prefix": ["!p", "!padding"],
-        "body": "public \\$have_paddings = false;\n",
+        "prefix": ["pds", "$have_paddings"],
+        "body": "public \\$have_paddings = false;\n$0",
         "description": "Removes padding"
     },
     "Have Container":{
-        "prefix": ["!c", "!container"],
-        "body": "public \\$have_container = true;\n",
+        "prefix": ["c", "$have_container"],
+        "body": "public \\$have_container = true;\n$0",
         "description": "Sets container"
     },
     "Default":{
-        "prefix": ["!d", "!default"],
+        "prefix": ["d", "$default_values"],
         "body": [
             "public \\$default_values = [",
             "\t'background_color' => '#f1f1f1',",
@@ -25,33 +25,295 @@
             "\t'padding_bottom' => '10px',",
             "\t'padding_tailwind' => 'py-24',",
             "\t'with_container' => false,",
-            "];\n"
+            "];\n$0"
         ],
         "description": "Edits default inserted styles"
     },
     "Use on Template":{
-        "prefix": ["!t", "!template"],
-        "body": "public \\$use_on_template = '${1:single-documentation books}';\n",
+        "prefix": ["t", "$use_on_template"],
+        "body": "public \\$use_on_template = '${1:single-documentation books}';\n$0",
         "description": ""
     },
     "Columns":{
-        "prefix": ["!col", "!columns"],
-        "body": "public \\$columns = ${1:4};\n",
+        "prefix": ["col", "$columns"],
+        "body": "public \\$columns = ${1:4};\n$0",
         "description": "Adds columns"
     },
     "Cruds":{
-        "prefix": ["!cr", "!crud"],
-        "body": "public \\$cruds = ['${1:menus}'];\n",
+        "prefix": ["cr", "$cruds"],
+        "body": "public \\$cruds = ['${1:menus}'];\n$0",
         "description": "Sets cruds"
     },
-    // "":{
-    //     "prefix": ["!", "!"],
-    //     "body": "",
+    
+    // Fields
+    "Field Text":{
+        "prefix": ["text"],
+        "body": "'text' => '$1',\n$0",
+        "description": ""
+    },
+    "Field Text Color":{
+        "prefix": ["text_color"],
+        "body": "'text_color' => '${1:#000}',\n$0",
+        "description": ""
+    },
+    "Field Text Color Hover":{
+        "prefix": ["text_color_hover"],
+        "body": "'text_color_hover' => '${1:#000}',\n$0",
+        "description": ""
+    },
+    "Field Link":{
+        "prefix": ["link"],
+        "body": "'link' => '$1',\n$0",
+        "description": ""
+    },
+    "Field Background Color":{
+        "prefix": ["background_color"],
+        "body": "'background_color' => '${1:#fff}',\n$0",
+        "description": ""
+    },
+    "Field Background Color Hover":{
+        "prefix": ["background_color_hover"],
+        "body": "'background_color_hover' => '${1:#fff}',\n$0",
+        "description": ""
+    },
+    "Field Background Image":{
+        "prefix": ["background_image"],
+        "body": "'background_image' => '${1:https://picsum.photos/1000}',\n$0",
+        "description": ""
+    },
+    "Field Color":{
+        "prefix": ["color"],
+        "body": "'color' => '${1:#000}',\n$0",
+        "description": ""
+    },
+    "Field Color Hover":{
+        "prefix": ["color_hover"],
+        "body": "'color_hover' => '${1:#000}',\n$0",
+        "description": ""
+    },
+    "Field Size":{
+        "prefix": ["size"],
+        "body": "'size' => 'text-${1:base}',\n$0",
+        "description": ""
+    },
+    "Field Icon":{
+        "prefix": ["icon"],
+        "body": "'icon' => 'fa fa-${1:cube}',\n$0",
+        "description": ""
+    },
+    "Field Height":{
+        "prefix": ["height"],
+        "body": "'height' => '${1:70px}',\n$0",
+        "description": ""
+    },
+    "Field Font":{
+        "prefix": ["font"],
+        "body": "'font' => '$1',\n$0",
+        "description": ""
+    },
+    "Field Weight":{
+        "prefix": ["weight"],
+        "body": "'weight' => ${1:500},\n$0",
+        "description": ""
+    },
+    "Field Classes":{
+        "prefix": ["classes"],
+        "body": "'classes' => '$1',\n$0",
+        "description": ""
+    },
+
+    // Inputs
+    "Input Badge":{
+        "prefix": "Badge::",
+        "body": [
+            "Badge::make('Badge')->default([",
+            "\t$1",
+            "]),\n$0"
+        ],
+        "description": ""
+    },
+    "Input Button":{
+        "prefix": "Button::",
+        "body": [
+            "Button::make('Button')->default([",
+            "\t$1",
+            "]),\n$0"
+        ],
+        "description": ""
+    },
+    "Input Content":{
+        "prefix": "Content::",
+        "body": [
+            "Content::make('Content')->default([",
+            "\t$1",
+            "]),\n$0"
+        ],
+        "description": ""
+    },
+    "Input Icon":{
+        "prefix": "Icon::",
+        "body": [
+            "Icon::make('Icon')->default([",
+            "\t$1",
+            "]),\n$0"
+        ],
+        "description": ""
+    },
+    "Input Link":{
+        "prefix": "Link::",
+        "body": [
+            "Link::make('Link')->default([",
+            "\t$1",
+            "]),\n$0"
+        ],
+        "description": ""
+    },
+    "Input Paragraph":{
+        "prefix": "Paragraph::",
+        "body": [
+            "Paragraph::make('Paragraph')->default([",
+            "\t$1",
+            "]),\n$0"
+        ],
+        "description": ""
+    },
+    "Input Title":{
+        "prefix": "Title::",
+        "body": [
+            "Title::make('Title')->default([",
+            "\t$1",
+            "]),\n$0"
+        ],
+        "description": ""
+    },
+    "Input BelongsTo":{
+        "prefix": "BelongsTo::",
+        "body": "BelongsTo::make('${1:BelongsTo}')->default('$2'),\n$0",
+        "description": ""
+    },
+    "Input Boolean":{
+        "prefix": "Boolean::",
+        "body": "Boolean::make('${1:Boolean}')->default('$2'),\n$0",
+        "description": ""
+    },
+    "Input Code":{
+        "prefix": "Code::",
+        "body": "Code::make('${1:Code}')->default('$2'),\n$0",
+        "description": ""
+    },
+    "Input Color":{
+        "prefix": "Color::",
+        "body": "Color::make('${1:Color}')->default('$2'),\n$0",
+        "description": ""
+    },
+    "Input Date":{
+        "prefix": "Date::",
+        "body": "Date::make('${1:Date}')->default('$2'),\n$0",
+        "description": ""
+    },
+    "Input DateTime":{
+        "prefix": "DateTime::",
+        "body": "DateTime::make('${1:DateTime}')->default('$2'),\n$0",
+        "description": ""
+    },
+    "Input Hidden":{
+        "prefix": "Hidden::",
+        "body": "Hidden::make('${1:Hidden}')->default('$2'),\n$0",
+        "description": ""
+    },
+    "Input Number":{
+        "prefix": "Number::",
+        "body": "Number::make('${1:Number}')->default('$2'),\n$0",
+        "description": ""
+    },
+    "Input Select":{
+        "prefix": "Select::",
+        "body": [
+            "Select::make('${1:Select}')->default('left')->options([",
+            "\t'left' => __('Left'),",
+            "\t'right' => __('Right'),",
+            "]),\n$0"
+        ],
+        "description": ""
+    },
+    "Input Text":{
+        "prefix": "Text::",
+        "body": "Text::make('${1:Text}')->default('$2'),\n$0",
+        "description": ""
+    },
+    "Input Textarea":{
+        "prefix": "Textarea::",
+        "body": "Textarea::make('${1:Textarea}')->default('$2'),\n$0",
+        "description": ""
+    },
+    "Input Trix":{
+        "prefix": "Trix::",
+        "body": "Trix::make('${1:Trix}')->default('$2'),\n$0",
+        "description": ""
+    },
+    "Input BorderType":{
+        "prefix": "BorderType::",
+        "body": "BorderType::make('${1:BorderType}')->default('$2'),\n$0",
+        "description": ""
+    },
+    "Input BackgroundColor":{
+        "prefix": "BackgroundColor::",
+        "body": "BackgroundColor::make('${1:BackgroundColor}')->default('${2:#fff}'),\n$0",
+        "description": ""
+    },
+    "Input BorderColor":{
+        "prefix": "BorderColor::",
+        "body": "BorderColor::make('${1:BorderColor}')->default('$2'),\n$0",
+        "description": ""
+    },
+    "Input FontFamily":{
+        "prefix": "FontFamily::",
+        "body": "FontFamily::make('${1:FontFamily}')->default('$2'),\n$0",
+        "description": ""
+    },
+    "Input FontWeight":{
+        "prefix": "FontWeight::",
+        "body": "FontWeight::make('${1:FontWeight}')->default('$2'),\n$0",
+        "description": ""
+    },
+    "Input TextColor":{
+        "prefix": "TextColor::",
+        "body": "TextColor::make('${1:TextColor}')->default('$2'),\n$0",
+        "description": ""
+    },
+    "Input BackgroundImage":{
+        "prefix": "BackgroundImage::",
+        "body": "BackgroundImage::make('${1:BackgroundImage}')->default('$2'),\n$0",
+        "description": ""
+    },
+    "Input Logo":{
+        "prefix": "Logo::",
+        "body": "Logo::make('${1:Logo}')->default('$2'),\n$0",
+        "description": ""
+    },
+    "Input Items":{
+        "prefix": "Items::",
+        "body": "Items::make('${1:Items}')->default('$2'),\n$0",
+        "description": ""
+    },
+    "Input Money":{
+        "prefix": "Money::",
+        "body": "Money::make('${1:Money}')->default('$2'),\n$0",
+        "description": ""
+    },
+    "Input SpotifyEmbedUrl":{
+        "prefix": "SpotifyEmbedUrl::",
+        "body": "SpotifyEmbedUrl::make('${1:SpotifyEmbedUrl}')->default('$2'),\n$0",
+        "description": ""
+    },
+    // "Inputsdas":{
+    //     "prefix": "",
+    //     "body": [
+    //   utsdas      ":utsdas:make('')->default([",
+    //         "\t$1",
+    //         "]),\n$0"
+    //     ],
     //     "description": ""
     // },
-    // "":{
-    //     "prefix": ["!", "!"],
-    //     "body": "",
-    //     "description": ""
-    // },
+
 }
